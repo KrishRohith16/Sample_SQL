@@ -109,3 +109,11 @@ INNER JOIN DEPT C ON A.DEPT_ID = C.DEPT_ID
 INNER JOIN DESIG D ON A.DESIG_ID = D.DESIG_ID;
 
 SELECT * FROM EMP
+-- _____________________________________________________
+
+-- 1ST MAX SALARY
+SELECT * FROM EMP WHERE SALARY = (SELECT MAX(SALARY) FROM EMP)
+
+-- 1ST MIN SALARY
+SELECT * FROM EMP WHERE SALARY = (SELECT MIN(SALARY) FROM EMP)
+-- _____________________________________________________
